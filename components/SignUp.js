@@ -3,6 +3,7 @@ import { TouchableOpacity, Image } from "react-native";
 import { IMAGE } from "../constants/IMAGE";
 import { CONSTANT } from "../constants/CONSTANTS";
 import AuthForm from "./AuthForm";
+import { validateEmail } from "../utils/commonFunctions";
 
 const SignUp = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -10,7 +11,7 @@ const SignUp = ({ navigation }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSignup = () => {
-    if (!email.includes("@")) {
+    if (validateEmail(email) == false) {
       alert(CONSTANT.VALID_EMAIL_ALERT);
       return;
     }

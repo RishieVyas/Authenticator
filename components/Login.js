@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import AuthContext from "../utils/AuthContext";
 import { CONSTANT } from "../constants/CONSTANTS";
 import AuthForm from "./AuthForm";
+import { validateEmail } from "../utils/commonFunctions";
 
 const Login = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -9,7 +10,7 @@ const Login = ({ navigation }) => {
   const { dispatch } = useContext(AuthContext);
 
   const handleLogin = () => {
-    if (!email.includes("@")) {
+    if (validateEmail(email) == false) {
       alert(CONSTANT.VALID_EMAIL_ALERT);
       return;
     }
