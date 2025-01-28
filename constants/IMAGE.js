@@ -4,5 +4,6 @@ export const IMAGE = {
   PASSWORD: require("../assets/password.png"),
   MASKED_PASSWORD: require("../assets/MaskedPassword.png"),
   GOOGLE: require("../assets/google.png"),
-  BACK_ARROW: require("../assets/back.png")
+  BACK_ARROW: require("../assets/back.png"),
+  WELCOME_LOGO: require("../assets/BHSquare.png")
 };

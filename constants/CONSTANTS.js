@@ -12,5 +12,7 @@ export const CONSTANT = {
     WELCOME_HEADER: "We're thrilled to have you!",
     ALREADY_HAVE_AN_ACCOUNT: "Already have an account? Login",
     PASSWORDS_DO_NOT_MATCH: "Passwords do not match.",
-    SIGNUP_SUCCESSFUL: "Signup successful!"
+    SIGNUP_SUCCESSFUL: "Signup successful!",
+    WELCOME_TEXT: "Welcome to Blockhouse.",
+    LOGOUT: "LOGOUT"
 }

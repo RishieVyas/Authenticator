@@ -1,20 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Image, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
+import { IMAGE } from "../constants/IMAGE";
+import { CONSTANT } from "../constants/CONSTANTS";
+import LoginStyles from "../styles/styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text>Home</Text>
+    <View style={LoginStyles.homeContainer}>
+      <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+        <Text style={LoginStyles.logOutText}>{CONSTANT.LOGOUT}</Text>
+      </TouchableOpacity>
+      <Image style={{ marginBottom: 20 }} source={IMAGE.WELCOME_LOGO} />
+      <Text style={{ fontSize: 20 }}>{CONSTANT.WELCOME_TEXT}</Text>
     </View>
-  )
-}
-
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        flex: 1
-    }
-})
+  );
+};
 
 export default Home;

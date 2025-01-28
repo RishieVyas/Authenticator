@@ -64,6 +64,18 @@ const LoginStyles = StyleSheet.create({
     fontSize: 25,
     color: "#000",
   },
+  homeContainer: {
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    flex: 1,
+    backgroundColor: "#FFF",
+  },
+  logOutText: {
+    color: "#000",
+    fontWeight: "bold",
+    fontSize: 30,
+    padding: 10,
+  },
 });
 
 export default LoginStyles;
